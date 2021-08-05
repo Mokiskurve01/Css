@@ -1,0 +1,55 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html
+{
+  height: 100%;
+  background-image: url(../img/pexels-pixabay-45230.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: 'Dosis', sans-serif;
+}
+.header
+{
+  text-align: center;
+}
+.logo
+{
+  max-width: 200px;
+  /*filter: invert(); die farbe wurde direkt in de svg datei geändert*/
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
+.main
+{
+  text-align: center;
+  color: white;
+}
+.main--heading
+{
+  margin-bottom: 5px;
+}
+.button
+{
+  margin-top: 10px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(135, 111, 96);
+  padding: 20px 10px 20px 10px;
+  border-radius: 100000px;
+  display: inline-block;
+
+  transition: background-color 0.5s;
+}
+.button:hover
+{
+  background-color: rgb(26, 29, 36);
+  /*color: yellow;
+  transition: all 0s;*/
+}
