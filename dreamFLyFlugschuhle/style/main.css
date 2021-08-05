@@ -24,7 +24,38 @@ html
   /*filter: invert(); die farbe wurde direkt in de svg datei geändert*/
   margin-top: 50px;
   margin-bottom: 35px;
+
+  animation: animate-logo-fly-in 4s ease-in-out 0s 1 both,
+  animate-logo-up-down 12s ease-in-out 4.5s infinite none;
 }
+@keyframes animate-logo-fly-in
+{
+  0% {
+    opacity: 0;
+    transform: translate(-60vw, 0px);
+  }
+  100% {
+    opacity: 0.9;
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes animate-logo-up-down
+{
+  0%, 100% {
+    transform: translate(0px,0px);
+  }
+  25% {
+    transform: translate(0px, -7px);
+  }
+  50% {
+    transform: translate(0px, 7px);
+  }
+  75% {
+    transform: translate(0px, 0px) scale(1.03);
+  }
+}
+
+
 .main
 {
   text-align: center;
