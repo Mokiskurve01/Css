@@ -1,89 +1,98 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html{
+
+html {
   height: 100%;
-  background-image: url(../img/pexels-pixabay-45230.jpg);
-  /*Das cover Schlüsselwort behält das Seitenverhältnis des Hintergrundbildes bei und skaliert es so, 
-  dass es so klein wie möglich ist, aber den Hintergrund-Positionierungsbereichs vollständig abdeckt.*/
+  background-image: radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0.3) 75%),
+    url("../img/pexels-pixabay-45230.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  /*Die CSS Eigenschaft background-attachmentlegt fest,
-  ob die Position eines Hintergrundbildes innerhalb des viewport fixiert ist,
-  oder ob es mit seinem enthaltenden Block scrollt.*/
   background-attachment: fixed;
 
   font-family: 'Dosis', sans-serif;
 }
-.header
-{
+
+.header {
   text-align: center;
 }
-.logo
-{
+
+.logo {
   max-width: 200px;
-  /*filter: invert(); die farbe wurde direkt in de svg datei geändert*/
   margin-top: 50px;
   margin-bottom: 35px;
-
-  animation: animate-logo-fly-in 4s ease-in-out 0s 1 both,
-  animate-logo-up-down 12s ease-in-out 4.5s infinite none;
+  animation: logo-fly-in 4s ease-in-out 0s 1 both,
+    logo-turbulences 15s ease-in-out 4.5s infinite none;
 }
-@keyframes animate-logo-fly-in
-{
+
+@keyframes logo-turbulences {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(0, -7px);
+  }
+
+  50% {
+    transform: translate(0, 7px);
+  }
+
+  75% {
+    transform: translate(0, 3px) scale(1.025);
+  }
+}
+
+@keyframes logo-fly-in {
   0% {
     opacity: 0;
-    transform: translate(-60vw, 0px);
+    transform: translate(-60vw, 0);
   }
+
   100% {
     opacity: 0.9;
-    transform: translate(0px, 0px);
-  }
-}
-@keyframes animate-logo-up-down
-{
-  0%, 100% {
-    transform: translate(0px,0px);
-  }
-  25% {
-    transform: translate(0px, -7px);
-  }
-  50% {
-    transform: translate(0px, 7px);
-  }
-  75% {
-    transform: translate(0px, 0px) scale(1.03);
+    transform: translate(0, 0);
   }
 }
 
-
-.main
-{
-  text-align: center;
+.main {
   color: white;
+  text-align: center;
 }
-.main--heading
-{
+
+.main--heading {
   margin-bottom: 5px;
+  text-shadow: 0px 0px 10px black;
 }
-.button
-{
-  margin-top: 10px;
+
+.main--paragraph {
+  text-shadow: 0px 0px 10px black;
+}
+
+.button {
+  margin-top: 20px;
   font-weight: bold;
   color: white;
   text-decoration: none;
-  background-color: rgb(135, 111, 96);
-  padding: 20px 10px 20px 10px;
-  border-radius: 100000px;
+  background-color: rgb(167, 135, 115);
+  padding: 10px 20px 10px 20px;
   display: inline-block;
-
-  transition: background-color 0.5s;
+  border-radius: 10000px;
 }
-.button:hover
-{
-  background-color: rgb(26, 29, 36);
-  /*color: yellow;
-  transition: all 0s;*/
+
+.button:hover {
+  background-image: radial-gradient(circle at 50% 50%, rgb(135, 111, 96) 1%, rgb(94, 76, 66) 1%);
+  background-size: 20000% 20000%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  transition: background-size linear 0.25s;
+}
+
+.button:hover:active {
+  transition-duration: 0s;
+  background-size: 100% 100%;
 }
