@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="de"><head>
+<html lang="de">
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transition-Timing-Function</title>
@@ -12,19 +14,20 @@
             height: 50px;
             width: 50%;
         }
+
         .inner {
             height: 50px;
             background-color: rgb(0, 0, 0);
             width: 0%;
             /* animation der inner class wenn der mauszeiger über der outer class ist
-            transition: width 2s ease-in 1s; */
+             */
 
             /* animations eigeschaften anpassen
             Webseite https://cubic-bezier.com/
             transition: width 2s cubic-bezier(.19,1.68,.79,1.61); */
             transition-property: width;
             transition-duration: 2s;
-            transition-timing-function: cubic-bezier(.19,1.68,.79,1.61);
+            transition-timing-function: cubic-bezier(.19, 1.68, .79, 1.61);
             transition-delay: 0s;
         }
 
@@ -32,10 +35,12 @@
             width: 100%;
         }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="outer">
         <div class="inner"></div>
     </div>
 </body>
+
 </html>
